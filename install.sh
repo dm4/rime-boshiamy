@@ -49,7 +49,7 @@ function install_boshiamy() {
 }
 
 install_boshiamy boshiamy_t
-cp ./default.custom.yaml ./squirrel.custom.yaml $RIME_HOME
+cp ./default.custom.yaml ./squirrel.custom.yaml ./slack_emoji.txt $RIME_HOME
 
 if [[ $PLATFORM == "unknown" ]]; then
   echo "\033[31m偵測到不支援的作業系統\033[m"
