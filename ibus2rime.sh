@@ -35,6 +35,16 @@ function create_rime_dict_file() {
   echo "version: \"$VERSION\""         >> $RIME_DICT
   echo 'sort: original'                >> $RIME_DICT
   echo 'use_preset_vocabulary: false'  >> $RIME_DICT
+
+  echo 'encoder:'                      >> $RIME_DICT
+  echo '  rules:'                      >> $RIME_DICT
+  for i in $(seq 2 5)
+  do
+      echo "    - length_equal: $i"      >> $RIME_DICT
+      local formula=$(python -c "print(''.join(list(map(lambda x: chr(ord('A') + x) + 'a', range($i)))))")
+      echo "      formula: \"$formula\"" >> $RIME_DICT
+  done
+
   echo ''                              >> $RIME_DICT
   echo '...'                           >> $RIME_DICT
 }
