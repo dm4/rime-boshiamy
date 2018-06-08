@@ -49,7 +49,6 @@ function install_boshiamy() {
 }
 
 install_boshiamy boshiamy_t
-install_boshiamy boshiamy_j
 
 if [[ $PLATFORM == "unknown" ]]; then
   echo "\033[31m偵測到不支援的作業系統\033[m"
@@ -66,6 +65,5 @@ else
   echo "        - schema: luna_pinyin_simp"
   echo "        - schema: luna_pinyin_tw"
   echo "\033[32m        - schema: boshiamy_t  # 嘸蝦米中文模式\033[m"
-  echo "\033[32m        - schema: boshiamy_j  # 嘸蝦米日文模式\033[m"
   echo    ""
 fi
