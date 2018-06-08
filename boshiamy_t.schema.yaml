@@ -37,7 +37,6 @@ engine:
     - echo_translator
     - reverse_lookup_translator
     - table_translator@fixed
-    - table_translator@slack_emoji
     - table_translator
   filters:
     - simplifier
@@ -68,14 +67,6 @@ fixed:
   enable_user_dict: false
   enable_completion: false
   initial_quality: 1000
-  comment_format:
-    - "erase/^.*$/"
-
-slack_emoji:
-  dictionary: ""
-  user_dict: slack_emoji
-  db_class: stabledb
-  enable_completion: false
   comment_format:
     - "erase/^.*$/"
 
