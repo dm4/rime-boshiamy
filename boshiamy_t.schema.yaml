@@ -60,8 +60,6 @@ translator:
   enable_encoder: true
   encode_commit_history: true
   max_phrase_length: 5
-  preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．、〔〕"
   comment_format:
     - "erase/^.*$/"
 
@@ -70,8 +68,6 @@ fixed:
   enable_user_dict: false
   enable_completion: false
   initial_quality: 1000
-  preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．、〔〕"
   comment_format:
     - "erase/^.*$/"
 
@@ -80,8 +76,6 @@ slack_emoji:
   user_dict: slack_emoji
   db_class: stabledb
   enable_completion: false
-  preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．、〔〕"
   comment_format:
     - "erase/^.*$/"
 
@@ -91,10 +85,8 @@ reverse_lookup:
   prefix: "'"
   suffix: ""
   tips: 〔拼音〕
-  preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．、〔〕"
   comment_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．、〔〕"
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 key_binder:
   bindings:
