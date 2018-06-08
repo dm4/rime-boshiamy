@@ -36,6 +36,7 @@ engine:
   translators:
     - echo_translator
     - reverse_lookup_translator
+    - table_translator@fixed
     - table_translator
   filters:
     - simplifier
@@ -54,10 +55,20 @@ translator:
   enable_charset_filter: true # 可以把 EXT 區的漢字給過濾掉
   enable_completion: true     # 不提示後續按鍵的組字結果
   enable_sentence: true       # 連打組句。若要啟動的話需要打開 speller/delimiter 及 enable_user_dict
-  enable_user_dict: true      # 使用者字頻調整機制。若打開的話則無法維持候選字順序。
+  enable_user_dict: true      # 使用者字頻調整機制。
   enable_encoder: true
   encode_commit_history: true
   max_phrase_length: 5
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．’〔〕"
+  comment_format:
+    - "erase/^.*$/"
+
+fixed:
+  dictionary: boshiamy_t
+  enable_user_dict: false
+  enable_completion: false
+  initial_quality: 1000
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz,.'[]|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．’〔〕"
   comment_format:
