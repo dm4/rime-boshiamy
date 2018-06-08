@@ -36,6 +36,10 @@ function install_boshiamy() {
   if [[ -f $table_file ]]; then
     ./ibus2rime.sh $table_file
 
+    # Add emojis
+    echo ''                 >> $dict_file
+    cat ./slack_emoji.txt   >> $dict_file
+
     cp $dict_file $schema_file $RIME_HOME
 
     echo "$name -- \033[1;32m完成\033[m"
@@ -49,7 +53,7 @@ function install_boshiamy() {
 }
 
 install_boshiamy boshiamy_t
-cp ./default.custom.yaml ./squirrel.custom.yaml ./slack_emoji.txt $RIME_HOME
+cp ./default.custom.yaml ./squirrel.custom.yaml $RIME_HOME
 
 if [[ $PLATFORM == "unknown" ]]; then
   echo "\033[31m偵測到不支援的作業系統\033[m"

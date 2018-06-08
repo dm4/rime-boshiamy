@@ -47,7 +47,7 @@ menu:
   alternative_select_keys: "0123456789"
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz,.'[]_"
+  alphabet: "abcdefghijklmnopqrstuvwxyz,.'[]_-+"
   delimiter: ";"
 
 translator:
